@@ -1,0 +1,4 @@
+interface:
+  display_name: "Family Doctor"
+  short_description: "English home triage and first-aid guidance."
+  default_prompt: "Help me assess whether symptoms or an injury are dangerous, especially for children, older adults, pregnancy, allergies, or chronic illness, and decide home care vs urgent care, ER, or emergency services."

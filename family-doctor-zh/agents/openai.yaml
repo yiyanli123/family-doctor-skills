@@ -1,0 +1,4 @@
+interface:
+  display_name: "家庭医生"
+  short_description: "Chinese home triage and first-aid guidance."
+  default_prompt: "帮我判断症状或外伤是否危险，尤其是儿童、老人、孕妇、易过敏或慢病人群，先做哪些居家处理，什么时候需要门诊、急诊或拨打 120。"
