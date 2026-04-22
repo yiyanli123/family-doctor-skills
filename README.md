@@ -65,16 +65,49 @@ Apps such as Claude Code, Cursor, Windsurf, Cline, Roo Code, and similar tools c
 
 ## How To Use
 
-English version:
+### Use With Codex
+
+After copying the skill folders into `~/.codex/skills/`, restart Codex or reload skills. Then ask Codex to use the language-specific skill:
 
 ```text
 Use family-doctor-en to help me assess whether these symptoms are dangerous and whether I should use home care, urgent care, the ER, or emergency services.
 ```
 
-Chinese version:
-
 ```text
 请使用 family-doctor-zh，帮我判断这个症状是否危险，应该居家观察、去门诊、去急诊，还是拨打 120。
+```
+
+### Use With Claude Code
+
+Open this repository in Claude Code. Claude Code should read `CLAUDE.md` as project-level guidance. Then ask it to use the matching instruction set:
+
+```text
+Use the English Family Doctor instructions in this repository to triage this situation: ...
+```
+
+```text
+请根据这个仓库里的中文家庭医生指令，帮我判断这个症状是否危险：……
+```
+
+### Use With Cursor, Windsurf, Cline, Roo Code, Or Similar Apps
+
+Open the repository in the app and point the agent to:
+
+- `AGENTS.md` for general repository instructions
+- `family-doctor-en/SKILL.md` for English use
+- `family-doctor-zh/SKILL.md` for Chinese use
+- The relevant files under `references/` for details
+
+Example prompt:
+
+```text
+Read AGENTS.md, then use family-doctor-en/SKILL.md and relevant reference files to help triage this home-health question: ...
+```
+
+Chinese example:
+
+```text
+请先读取 AGENTS.md，然后使用 family-doctor-zh/SKILL.md 和相关 references 文件，帮我做居家健康分流：……
 ```
 
 ## What To Include

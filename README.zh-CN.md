@@ -66,16 +66,49 @@ Claude Code、Cursor、Windsurf、Cline、Roo Code 以及类似的 vibe coding a
 
 ## 如何使用
 
-中文版本：
+### 在 Codex 中使用
+
+把 skill 目录复制到 `~/.codex/skills/` 后，重启 Codex 或重新加载 skills。然后直接要求 Codex 使用对应语言版本：
 
 ```text
 请使用 family-doctor-zh，帮我判断这个症状是否危险，应该居家观察、去门诊、去急诊，还是拨打 120。
 ```
 
-英文版本：
-
 ```text
 Use family-doctor-en to help me assess whether these symptoms are dangerous and whether I should use home care, urgent care, the ER, or emergency services.
+```
+
+### 在 Claude Code 中使用
+
+用 Claude Code 打开这个仓库。Claude Code 通常会读取 `CLAUDE.md` 作为项目级说明。然后你可以这样问：
+
+```text
+请根据这个仓库里的中文家庭医生指令，帮我判断这个症状是否危险：……
+```
+
+```text
+Use the English Family Doctor instructions in this repository to triage this situation: ...
+```
+
+### 在 Cursor、Windsurf、Cline、Roo Code 等工具中使用
+
+用对应 app 打开这个仓库，然后让 agent 读取：
+
+- `AGENTS.md`：通用仓库级说明
+- `family-doctor-zh/SKILL.md`：中文版本体
+- `family-doctor-en/SKILL.md`：英文版本体
+- `references/` 下相关文件：具体场景参考
+
+示例：
+
+```text
+请先读取 AGENTS.md，然后使用 family-doctor-zh/SKILL.md 和相关 references 文件，帮我做居家健康分流：……
+```
+
+英文示例：
+
+```text
+Read AGENTS.md, then use family-doctor-en/SKILL.md and relevant reference files to help triage this home-health question: ...
 ```
 
 ## 提问时建议提供
